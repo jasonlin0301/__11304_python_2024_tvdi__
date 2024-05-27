@@ -1,16 +1,13 @@
-# jasonlin0301_window
+# 第二次作業
+[第二次練習](https://github.com/jasonlin0301/jasonlin0301_window/blob/main/downloads/lesson2.ipynb)  
 
-# 11304python應用實戰班 
+將位址使用requests.get 賦值response  
+-response:Response  
+-from requests import Response  
+-url = 'https://data.moenv.gov.tw/api/v2/aqx_p_488?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=datacreationdate desc&format=JSON'    
+-res:Response = requests.get(url=url)
 
-## 上課網址
-https://meet.google.com/wdk-fzdc-swx
-
-這是什麼
-
-- 這是第一排
-- 這是第二排
-
-1. 這是python1
-2. 這是python2
-
-[markdown第一次練習](https://github.com/jasonlin0301/jasonlin0301_window/tree/main/markdown%E7%B7%B4%E7%BF%92)
+網址的json,儲存為aqi.json檔  
+-with open("aqi.json", 'wb') as fd:  
+--for chunk in res.iter_content(chunk_size=128):  
+---fd.write(chunk)
